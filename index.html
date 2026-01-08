@@ -873,9 +873,9 @@
                     <h1>Your Background Doesn't Define Your Future.</h1>
                     <p>Lumora Academy provides <strong>free STEM education, mentorship, and real opportunities</strong> to underrepresented and low-income students. Because talent is everywhere—opportunity should be too.</p>
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary" onclick="openModal('involveModal')">Get Started For Free</a>
-                        <a href="#" class="btn btn-secondary" onclick="openModal('chapterModal')">Bring Lumora to Your School</a>
-                        <a href="#" class="btn btn-secondary" onclick="showPage('resources')">Access Free Resources</a>
+                        <a href="#" class="btn btn-primary" onclick="event.preventDefault(); openModal('involveModal')">Get Started For Free</a>
+                        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); openModal('chapterModal')">Bring Lumora to Your School</a>
+                        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); showPage('resources')">Access Free Resources</a>
                     </div>
                 </div>
             </section>
@@ -911,25 +911,25 @@
                         <div class="program-icon"><i class="fas fa-flask"></i></div>
                         <h3>Free STEM Workshops</h3>
                         <p>Hands-on workshops in robotics, coding, engineering, and more. No experience needed—just curiosity and determination.</p>
-                        <a href="#" class="learn-more" onclick="showPage('programs')">Join a Workshop <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learn-more" onclick="event.preventDefault(); showPage('programs')">Join a Workshop <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="program-card">
                         <div class="program-icon"><i class="fas fa-user-friends"></i></div>
                         <h3>Mentorship & Guidance</h3>
                         <p>Connect with mentors who've been where you are. Get help with college apps, scholarships, career planning, and more.</p>
-                        <a href="#" class="learn-more" onclick="showPage('programs')">Find a Mentor <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learn-more" onclick="event.preventDefault(); showPage('programs')">Find a Mentor <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="program-card">
                         <div class="program-icon"><i class="fas fa-laptop-code"></i></div>
                         <h3>Free Tutoring</h3>
                         <p>One-on-one support in math, science, and programming. We'll help you succeed in school and beyond.</p>
-                        <a href="#" class="learn-more" onclick="showPage('programs')">Get Tutoring <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learn-more" onclick="event.preventDefault(); showPage('programs')">Get Tutoring <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="program-card">
                         <div class="program-icon"><i class="fas fa-briefcase"></i></div>
                         <h3>Scholarships & Opportunities</h3>
                         <p>Access internships, research opportunities, and scholarship info. We connect you with real pathways to success.</p>
-                        <a href="#" class="learn-more" onclick="showPage('programs')">Explore Opportunities <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learn-more" onclick="event.preventDefault(); showPage('programs')">Explore Opportunities <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </section>

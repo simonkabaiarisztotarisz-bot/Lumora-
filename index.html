@@ -535,6 +535,10 @@
             padding: 2rem;
         }
 
+        .modal:target {
+            display: flex;
+        }
+
         .modal.active {
             display: flex;
         }
@@ -560,6 +564,8 @@
             color: var(--gray);
             background: none;
             border: none;
+            padding: 0.5rem;
+            line-height: 1;
         }
 
         .modal-close:hover {
@@ -840,22 +846,22 @@
                 Lumora Academy
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="#home" onclick="showPage('home')">Home</a></li>
+                <li class="nav-item"><a href="#" id="homeNavBtn">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a href="#about" onclick="showPage('about')">About Us <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+                    <a href="#" data-page="about">About Us <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="#mission" onclick="showPage('about')">Mission</a>
-                        <a href="#values" onclick="showPage('about')">Values</a>
-                        <a href="#team" onclick="showPage('about')">Student Leadership Team</a>
-                        <a href="#impact" onclick="showPage('about')">Impact</a>
+                        <a href="#" data-page="about">Mission</a>
+                        <a href="#" data-page="about">Values</a>
+                        <a href="#" data-page="about">Student Leadership Team</a>
+                        <a href="#" data-page="about">Impact</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="#programs" onclick="showPage('programs')">Programs</a></li>
-                <li class="nav-item"><a href="#chapter" onclick="showPage('chapter')">Start a Chapter</a></li>
-                <li class="nav-item"><a href="#involve" onclick="showPage('involve')">Get Involved</a></li>
-                <li class="nav-item"><a href="#resources" onclick="showPage('resources')">Resources</a></li>
-                <li class="nav-item"><a href="#volunteer" onclick="showPage('volunteer')">Volunteer</a></li>
-                <li class="nav-item"><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+                <li class="nav-item"><a href="#" data-page="programs">Programs</a></li>
+                <li class="nav-item"><a href="#" data-page="chapter">Start a Chapter</a></li>
+                <li class="nav-item"><a href="#" data-page="involve">Get Involved</a></li>
+                <li class="nav-item"><a href="#" data-page="resources">Resources</a></li>
+                <li class="nav-item"><a href="#" data-page="volunteer">Volunteer</a></li>
+                <li class="nav-item"><a href="#" data-page="contact">Contact</a></li>
             </ul>
             <div class="mobile-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
@@ -873,9 +879,9 @@
                     <h1>Your Background Doesn't Define Your Future.</h1>
                     <p>Lumora Academy provides <strong>free STEM education, mentorship, and real opportunities</strong> to underrepresented and low-income students. Because talent is everywhere—opportunity should be too.</p>
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary" onclick="event.preventDefault(); openModal('involveModal')">Get Started For Free</a>
-                        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); openModal('chapterModal')">Bring Lumora to Your School</a>
-                        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); showPage('resources')">Access Free Resources</a>
+                        <a href="#involveModal" class="btn btn-primary">Get Started For Free</a>
+                        <a href="#chapterModal" class="btn btn-secondary">Bring Lumora to Your School</a>
+                        <a href="#resourcesPage" class="btn btn-secondary" onclick="document.querySelectorAll('.page').forEach(p => p.style.display='none'); document.getElementById('resourcesPage').style.display='block'; window.scrollTo(0,0); return false;">Access Free Resources</a>
                     </div>
                 </div>
             </section>
